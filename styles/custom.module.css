@@ -13,8 +13,8 @@
 
 /* MATRIZ 8X8 */
 .circular_button {
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1.6rem;
+    height: 1.6rem;
     border-radius: 50%;
     background-color: blue;
     cursor: pointer;
@@ -22,9 +22,6 @@
     padding: 0;
 }
 
-.circular_button:hover {
-
-}
 
 .button_on {
     background-color: red;
@@ -59,12 +56,11 @@
 .led_red_on {
     background-color: #F00;
     box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
-    -webkit-animation: blinkRed 1s;
+    -webkit-animation: blinkRed 0.5s;
 }
 
 @keyframes blinkRed {
-    from { background-color: #F00; }
-    50% { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
+    from { background-color: #A00; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;}
     to { background-color: #F00; }
 }
 
@@ -78,12 +74,11 @@
 .led_green_on {
     background-color: #ABFF00;
     box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;
-    -webkit-animation: blinkGreen 1s;
+    -webkit-animation: blinkGreen 0.5s;
 }
 
 @keyframes blinkGreen {
-    from { background-color: #ABFF00; }
-    50% { background-color: #519801; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;}
+    from { background-color: #519801; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;}
     to { background-color: #ABFF00; }
 }
 
@@ -96,17 +91,16 @@
 .led_blue_on {
     background-color: #24E0FF;
     box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #006 0 -1px 9px, #3F8CFF 0 2px 14px;
-    -webkit-animation: blinkBlue 1s;
+    -webkit-animation: blinkBlue 0.4s;
 }
 
 @keyframes blinkBlue {
-    from { background-color: #24E0FF; }
-    50% { background-color: #224681; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #006 0 -1px 9px, #3F8CFF 0 2px 14px;}
+    from { background-color: #224681; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #006 0 -1px 9px, #3F8CFF 0 2px 14px;}
     to { background-color: #24E0FF; }
 }
 
 .led_blue_off {
-    background-color: #224681;
+    background-color: #0f1f3b;
 }
 
 
