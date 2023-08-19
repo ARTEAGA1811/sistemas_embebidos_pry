@@ -19,11 +19,10 @@ export const Matriz = () => {
 
     return (
         <div>
-            <h1 className={"text-center"}>Matriz 8x8</h1>
+            <h1 className={"text-center text-primary"}>Matriz 8x8</h1>
             <div>
                 {renderMatrix()}
             </div>
-            <Button variant={"outline-primary"} className={"text-center mt-2"}>Enviar</Button>
         </div>
     )
 }

@@ -5,7 +5,7 @@ import {useState} from "react";
 export const Circular_Button = (props:{btn_state:boolean, row: number, col: number}) => {
 
     const [stateBtn, setStateBtn] = useState(props.btn_state);
-    const changeState = () => {
+    const getCurrentState = () => {
         if (stateBtn) {
             return st.led_blue_on;
         } else {
@@ -13,9 +13,13 @@ export const Circular_Button = (props:{btn_state:boolean, row: number, col: numb
         }
     }
 
+    const changeState = () => {
+        setStateBtn(!stateBtn);
+    }
+
 
     return (
-            <button className={st.circular_button + " " + changeState()} onClick={() => setStateBtn(!stateBtn)}>
+            <button className={st.circular_button + " " + getCurrentState()} onClick={changeState}>
             </button>
     )
 }

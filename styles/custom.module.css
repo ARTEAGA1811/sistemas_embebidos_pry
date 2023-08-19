@@ -3,13 +3,17 @@
     /*height: 100vh; */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 4rem;
     column-gap: 2rem;
+    row-gap: 4rem;
     align-items: start;
     justify-items: center;
-    padding-top: 2rem;
+    padding: 2rem 1rem;
+
 }
 
+.title {
+
+}
 
 /* MATRIZ 8X8 */
 .circular_button {
@@ -41,16 +45,18 @@
 }
 
 .led_box {
-    cursor: pointer;
+
+    margin: 1.4rem;
 }
 
 
 .led_rgb{
     margin: 0 auto;
-    width: 24px;
-    height: 24px;
+    width: 3.6rem;
+    height: 3.6rem;
     border-radius: 50%;
-
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px;
+    cursor: pointer;
 }
 
 .led_red_on {
@@ -115,11 +121,11 @@
 }
 .led_unico{
     margin: 0 auto;
-    width:48px;
-    height: 48px;
+    width: 3.6rem;
+    height: 3.6rem;
     border-radius: 50%;
-
-
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px;
+    cursor: pointer;
 }
 
 

@@ -1,22 +1,20 @@
 import st from "@/styles/custom.module.css";
+import {useState} from "react";
 
-export const Led_RGB = (props:{color: string}) => {
+export const Led_RGB = (props:{red: number, green: number, blue: number}) => {
+
 
     const setColor = () => {
-        if (props.color == "red") {
-            return st.led_red_on;
-        }
-        if (props.color == "green") {
-            return st.led_green_on;
-        }
-        if (props.color == "blue") {
-            return st.led_blue_on;
-        }
+        return "rgb(" + props.red + ", " + props.green + ", " + props.blue + ")";
     }
+
     return (
 
         <div className={st.led_box}>
-            <div className={st.led_rgb + " " + setColor()}></div>
+            <div className={st.led_rgb}
+                style={{backgroundColor: setColor()}}
+            >
+            </div>
         </div>
 
     )
