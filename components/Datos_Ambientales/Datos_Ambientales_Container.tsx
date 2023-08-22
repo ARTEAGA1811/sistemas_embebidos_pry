@@ -65,7 +65,7 @@ export const Datos_Ambientales_Container = () => {
     }
     useEffect(() => {
         //setInterval(getFakeData, 5000);
-        setInterval(getRealData, 50000);
+        setInterval(getRealData, 5000);
     }, [])
     //getFakeData each 5 seconds
 

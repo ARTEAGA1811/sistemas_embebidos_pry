@@ -1,0 +1,3 @@
+interface LedRGBInterface {
+    "encendido": boolean,
+}
