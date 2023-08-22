@@ -9,7 +9,7 @@ export const Matriz = () => {
         for (let i = 0; i < rows; i++) {
             const row = [];
             for (let j = 0; j < columns; j++) {
-                row.push(<Circular_Button key={`${i}-${j}`} btn_state={false} row={i} col={j}/>);
+                row.push(<Circular_Button key={`${i}-${j}`} row={i} col={j}/>);
             }
             matrix.push(<div key={i}>{row}</div>);
         }

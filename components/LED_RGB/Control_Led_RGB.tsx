@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Led_RGB} from "@/components/LED_RGB/Led_RGB";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-
+import axios from "axios";
 
 export const Control_Led_RGB = () => {
     const [red, setRed] = useState(255);
@@ -22,9 +22,27 @@ export const Control_Led_RGB = () => {
     }
 
     const changeArduinoLedColor = () => {
-        console.log("Red: " + red);
-        console.log("Green: " + green);
-        console.log("Blue: " + blue);
+        const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || 'xd';
+        const SET_COLOR_PATH = process.env.NEXT_PUBLIC_RGB_COLOR_PATH || '';
+        const URL = BASE_PATH + SET_COLOR_PATH;
+        console.log(typeof red);
+        console.log(typeof green);
+        console.log(typeof blue);
+        axios.post(URL, {
+                rojo: red,
+                verde: green,
+                azul: blue
+            }
+        ).then(
+            (response) => {
+                console.log(response.status);
+                console.log(response.data);
+            }
+        ).catch(
+            (error) => {
+                console.error(error);
+            }
+        )
     }
 
     return (
@@ -42,7 +60,7 @@ export const Control_Led_RGB = () => {
                         aria-describedby="r"
                         className={"w-50 fw-bold"}
                         value={red}
-                        onChange={(e) => changeRed(e.target.value)}
+                        onChange={(e) => changeRed(parseInt(e.target.value))}
                     />
                     <Form.Control
                         type="number"
@@ -53,7 +71,7 @@ export const Control_Led_RGB = () => {
                         aria-describedby="r"
                         className={"w-50 fw-bold"}
                         value={green}
-                        onChange={(e) => changeGreen(e.target.value)}
+                        onChange={(e) => changeGreen(parseInt(e.target.value))}
                     />
                     <Form.Control
                         type="number"
@@ -64,7 +82,7 @@ export const Control_Led_RGB = () => {
                         aria-describedby="r"
                         className={"w-50 fw-bold"}
                         value={blue}
-                        onChange={(e) => changeBlue(e.target.value)}
+                        onChange={(e) => changeBlue(parseInt(e.target.value))}
                     />
                 </section>
                 <div className={"d-flex justify-content-center w-100 mt-2"}>
@@ -72,7 +90,7 @@ export const Control_Led_RGB = () => {
                             className={""}
                             onClick={changeArduinoLedColor}
                     >
-                        Seleccionar color
+                        Enviar
                     </Button>
                 </div>
 
