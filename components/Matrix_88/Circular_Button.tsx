@@ -9,9 +9,9 @@ export const Circular_Button = (props: { row: number, col: number }) => {
     const [firstRender, setFirstRender] = useState(true);
     const getCurrentState = () => {
         if (stateBtn) {
-            return st.led_blue_on;
+            return st.led_red_on;
         } else {
-            return st.led_blue_off;
+            return st.led_red_off;
         }
     }
 

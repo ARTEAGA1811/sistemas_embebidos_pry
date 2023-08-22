@@ -4,9 +4,9 @@ export const LED_Unico = ({btnState}:{btnState:boolean}) => {
 
     const getCurrentState = () => {
         if (btnState) {
-            return st.led_blue_on;
+            return st.led_red_on;
         } else {
-            return st.led_blue_off;
+            return st.led_red_off;
         }
     }
 
