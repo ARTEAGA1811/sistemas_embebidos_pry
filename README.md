@@ -1,3 +1,26 @@
+# Sistemas embebidos
+Luego de descargar el proyecto se debe agregar el archivo
+```
+.env.local
+```
+en la raíz del proyecto, el cual debe contener las siguientes variables de entorno:
+```
+NEXT_PUBLIC_BASE_PATH=http://localhost:8000
+NEXT_PUBLIC_MATRIX_PATH=/matriz/
+NEXT_PUBLIC_RGB_PATH=/set-color/
+NEXT_PUBLIC_HUMIDITY_PATH=/humedad/
+NEXT_PUBLIC_TEMPERATURE_PATH=/temperatura/
+NEXT_PUBLIC_LIGHT_PATH=/luz/
+NEXT_PUBLIC_TOGGLE_LED_PATH=/toggle-led/
+NEXT_PUBLIC_RGB_COLOR_PATH=/set-color/
+```
+---
+
+Instalar las librearías necesarias:
+```
+npm install
+```
+---
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
